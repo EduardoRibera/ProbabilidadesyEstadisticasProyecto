@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Ordenados y Estadísticas</title>
+    <link rel="stylesheet" href="style.css"> <!-- Si tienes un archivo CSS -->
+</head>
+<body>
+    <h1>Ingreso de Datos</h1>
+
+    <label for="dataType">Selecciona el tipo de datos:</label>
+    <select id="dataType" onchange="cambiarPlaceholder()">
+        <option value="numerico">Numéricos</option>
+        <option value="palabras">Palabras</option>
+    </select>
+
+    <br><br>
+
+    <label for="dataInput">Ingresa los datos (separados por comas):</label>
+    <input type="text" id="dataInput" placeholder="Ejemplo: 12, 45, 78, 3, 6" />
+
+    <br><br>
+
+    <button onclick="procesarDatos()">Procesar Datos</button>
+
+    <h2>Datos Ordenados</h2>
+    <table id="sortedTable" border="1">
+        <tbody></tbody>
+    </table>
+
+    <h2>Resultados de Cálculos</h2>
+    <ul>
+        <li>Mínimo: <span id="minimo"></span></li>
+        <li>Máximo: <span id="maximo"></span></li>
+        <li>Rango: <span id="rango"></span></li>
+        <li>Número de Intervalos: <span id="intervalos"></span></li>
+        <li>Ancho de Clase: <span id="amplitud"></span></li>
+    </ul>
+
+    <h2>Tabla de Estadísticas</h2>
+    <table id="statisticsTable" border="1">
+        <thead>
+            <tr>
+                <th>Iteración</th>
+                <th>Límite Inferior</th>
+                <th>Límite Superior</th>
+                <th>Marco de Clase</th>
+                <th>Frecuencia Absoluta</th>
+                <th>Frecuencia Absoluta Acumulativa</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
